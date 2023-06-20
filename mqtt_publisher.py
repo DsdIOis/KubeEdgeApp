@@ -6,8 +6,10 @@ from pathlib import Path
 import time
 
 # Secrets read from devices
-node = Path('/.kubeedge_app_secrets/node.secret').read_text()
-port = int(Path('/.kubeedge_app_secrets/mqtt_port.secret').read_text())
+# node = Path('/.kubeedge_app_secrets/node.secret').read_text()
+# port = int(Path('/.kubeedge_app_secrets/mqtt_port.secret').read_text())
+node = 'test'
+port = 1883
 
 # Send mosquitto messages through docker network
 mqttBroker = "172.17.0.1"
