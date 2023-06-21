@@ -14,7 +14,12 @@ import socket
 print(socket.gethostname())
 
 node = 'test'
-port = 1883
+if socket.gethostname() == 'raspberrypi4':
+    port = 1883
+elif socket.gethostname() == 'raspberrypi3':
+    port = 1884
+else:
+    port = 1883
 
 # Send mosquitto messages through docker network
 mqttBroker = "172.17.0.1"
