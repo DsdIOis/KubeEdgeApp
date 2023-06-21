@@ -9,8 +9,9 @@ import time
 # node = Path('/.kubeedge_app_secrets/node.secret').read_text()
 # port = int(Path('/.kubeedge_app_secrets/mqtt_port.secret').read_text())
 # port = int(Path('/.kubeedge_app_secrets/mqtt_port.secret').read_text())
-import getpass
-print(getpass.getuser())
+import socket
+
+print(socket.gethostname())
 
 node = 'test'
 port = 1883
